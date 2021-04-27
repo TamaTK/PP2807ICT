@@ -2,19 +2,12 @@
 # is entered, then prints the shortest string that was entered. The output must match the
 # punctuation in this example exactly (with quote marks).
 
-# shortest = input("Please enter a string.")
-# stopper = 0
-# flag = 'A'
+userInput = input("Enter a String:")    # Initialising first input is important for line 6
+shortest = userInput                    # The first sentence is always going to be the shortest for now.
 
-# while stopper == 0:
+while userInput[0] != "A":              # Sentinel value is "A". Assumption that "a" is not wanted.
+    userInput = input("Enter a String:")
+    if len(userInput) < len(shortest):
+        shortest = userInput
 
-#    x = (input("Please enter another string."))
-
-#    for i in range(x):
-#        if x[i] == "A":
-#           stopper = 1
-
-x = "The Quick Brown Fox Jumped Over the Lazy Dog."
-
-for i in range(len(x)):
-    print(x[i])
+print("Shortest was: " + "'" + shortest + "'")
