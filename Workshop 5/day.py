@@ -20,7 +20,7 @@ def day(x, y):
         day_amount = 365 + add
         total_days += day_amount
 
-        return str(total_days)
+    return str(total_days)
 
 
 start = int(input("Year 1?"))  # First year.
