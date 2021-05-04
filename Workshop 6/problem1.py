@@ -34,4 +34,3 @@ while userInput != "":
 
 """ We can now check to see if the contents of the string are only part of the alphabet on line 17, and then simply
 change our capital A's back into whitespaces again"""
-
