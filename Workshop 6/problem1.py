@@ -26,10 +26,12 @@ while userInput != "":
 
     userInput = str(input("Please enter a string (Letters Only!): "))
 
-""" Function list_convert will be used to convert the final list back into a string."""
+""" Function list_convert will be used to convert the final list back into a string for formatting purposes."""
 
-""" Line 9 replaces all whitespaces (which are symbols) with a capital A. Since on line 8 the program has
+""" Line 15 replaces all whitespaces (which are symbols) with a capital A. Since on line 14 the program has
  already made the original contents of the string all lowercase, we can easily identify capital A's as something that
  needs to be removed later on """
 
-""" We can now check to see if the contents of the string are only part of the alphabet on line 17."""
+""" We can now check to see if the contents of the string are only part of the alphabet on line 17, and then simply
+change our capital A's back into whitespaces again"""
+
