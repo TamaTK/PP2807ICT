@@ -8,7 +8,7 @@ def list_converter(s):
     return(field.join(s))
 
 
-userInput = str(input("Please enter a string (Letters Only!): "))
+userInput = str(input("Please enter a string, letters only!: "))
 
 while userInput != "":
     w = userInput.casefold()
@@ -24,7 +24,7 @@ while userInput != "":
     else:
         pass
 
-    userInput = str(input("Please enter a string (Letters Only!): "))
+    userInput = str(input("Please enter a string, letters only!: "))
 
 """ Function list_convert will be used to convert the final list back into a string for formatting purposes."""
 
