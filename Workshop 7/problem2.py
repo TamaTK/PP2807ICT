@@ -13,6 +13,6 @@ def line_reader(x):
 line_reader(input("File Name: "))
 
 
-""" Function uses user input as argument. Path is opened using 'with' statement. We create a list by method chaining 
-.read().splitlines() (reads contents of file and splits string into a list where each line is a list item).
-Finally, first two lines are printed, last two lines are printed. """
+""" Function uses user input as argument. Path is opened using 'with statement. We create a list by method chaining 
+.read().splitlines() (reads contents of file and splits string into a list where each line is a list item.
+First two lines are printed, last two lines are printed. """
