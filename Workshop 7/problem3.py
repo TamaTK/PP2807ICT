@@ -25,7 +25,7 @@ line_average(input("Source File: "))
 by their total amount
 
 Function numbers_from_line converts each number we want into an integer, splits each line of whitespace and returns this
-in a list 
+in a list (using a generator expression)
 
 Function line_average iterates through each line of the file, grabs the numbers from each line using 
 numbers_from line, averages them using average_of_list, and prints it out."""
