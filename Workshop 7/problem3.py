@@ -17,6 +17,7 @@ def line_average(filename):
             numbers = numbers_from_line(line)
             average = average_of_list(numbers)
             print("The average of line " + str(count) + " is " + str(average))
+            count += 1
 
 
 line_average(input("Source File: "))
