@@ -6,8 +6,8 @@ def average_of_list(lst):
     return sum(lst) / len(lst)
 
 
-def numbers_from_line(str):
-    return [int(digit) for digit in str.split()]
+def numbers_from_line(string):
+    return [int(digit) for digit in string.split()]
 
 
 def line_average(filename):

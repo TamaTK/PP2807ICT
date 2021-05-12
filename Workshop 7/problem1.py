@@ -2,9 +2,9 @@
 # file to write, and copy the content of the source file to the target file, but get all empty lines
 # removed, then output the number of empty lines removed.
 
-def read_write(x, y):
+def read_write(sourcefile, targetfile):
     empty_count = 0
-    with open(x, 'r') as source, open(y, 'w') as target:
+    with open(sourcefile, 'r') as source, open(targetfile, 'w') as target:
         for line in source:
             if line.isspace():
                 empty_count += 1
