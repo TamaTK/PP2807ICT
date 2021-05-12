@@ -2,18 +2,15 @@
 # file to write, and copy the content of the source file to the target file, but get all empty lines
 # removed, then output the number of empty lines removed.
 
-# prompt
-srcPath = input("Source file name: ")
-trgPath = input("Target file name: ")
-emptyCounter = 0
-
-# open and write
-with open(srcPath, 'r') as src:
-    with open(trgPath, 'w') as trg:
-        for line in src:
+def read_write(x, y):
+    empty_count = 0
+    with open(x, 'r') as source, open(y, 'w') as target:
+        for line in source:
             if line.isspace():
-                emptyCounter += 1
+                empty_count += 1
             else:
-                trg.write(line)
-    print("Lines Removed: " + str(emptyCounter))
+                target.write(line)
+    print("Lines Removed: " + str(empty_count))
 
+
+read_write(input("Source file name: "), input("Target file name: "))
