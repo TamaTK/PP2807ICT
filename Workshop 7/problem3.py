@@ -20,7 +20,7 @@ def line_average(filename):
             count += 1
 
 
-line_average(input("Source File: "))
+line_average(input("File Name: "))
 
 """ Function average_of_list simply returns the average of the list of numbers by summing them all and dividing
 by their total amount
