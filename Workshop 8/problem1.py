@@ -1,11 +1,6 @@
 # Write a function that given a list of numbers, rotate the numbers so the first number becomes the last, and the
 # rest numbers move one position forward. Make the rotation iteratively until it returns to the initial form.
 
-def list_generate(string):
-    lst = string.split()
-    return lst
-
-
 def list_rotate(lst):
     new_list = lst
     new_list.append(new_list[0])
@@ -14,14 +9,19 @@ def list_rotate(lst):
 
 
 def numeric_check(lst):
+    x = 0
     for element in lst:
         if element.isnumeric():
-            return True
+            pass
         else:
-            return False
+            x += 1
+    if x == 0:
+        return True
+    else:
+        return False
 
 
-numbers = list_generate(input("Enter a List: "))
+numbers = input("Enter a List: ").split()
 
 if numeric_check(numbers):
     print(numbers)
@@ -37,5 +37,4 @@ else:
 """ I am toying with the concept of pure functions as I complete this workshop problem. Problem question has been
 handled with list_rotate. list_rotate is iterated through for how many elements there are in the list. I have noticed
 that the example for the problem begins with the user input being presented as a list initially, before being iterated
-through. I have expressed this in my code by printing the list once outside of the iteration. """
-
+through a rotation. I have expressed this in my code by printing the list once outside of the iteration. """
