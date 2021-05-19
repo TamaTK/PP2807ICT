@@ -3,37 +3,29 @@
 # returned list shall not contain duplicate elements. Your main program will allow the user
 # enter two lists of numbers and end input with a blank line for list 1.
 
-def elements_to_numbers(collection):        # function converts elements in the list to integers
-    int_list = []
-    for i in range(len(collection)):
-        int_list.append(
-            int(
-                collection[i]))
+def elements_to_numbers(collection):        # Function converts elements in given list and returns new list with
+    int_list = list(map(int, collection))   # each element as an integer
     return int_list
 
 
-def numeric_check(lst):
-    x = 0
+def numeric_check(lst):                     # Checks if all string elements in a list are numeric, returns bool
     for element in lst:
         if element.isnumeric():
             pass
         else:
-            x += 1
-    if x == 0:
-        return True
-    else:
-        return False
+            return False
+    return True
 
 
-def unique(lst):
+def unique(lst):                            # Function creates a list of unique values by converting list->set->list
     list_set = set(lst)
     unique_list = (list(list_set))
     return unique_list
 
 
-def list_compare(list1, list2):
-    new_list = []
-    for i in range(len(list1)):
+def list_compare(list1, list2):             # Function iterates through two lists, if any elements are the same in
+    new_list = []                           # either list, those elements will be appended to a new list.
+    for i in range(len(list1)):             # Function returns new list.
         for j in range(len(list2)):
             if list1[i] == list2[j]:
                 new_list.append(list1[i])
@@ -42,9 +34,8 @@ def list_compare(list1, list2):
     return new_list
 
 
-sentinel = 1
-
-while sentinel == 1:
+sentinel = 0
+while sentinel != 1:
     first = input("List 1: ").split()
     if first:
 
@@ -60,11 +51,20 @@ while sentinel == 1:
 
             else:
                 print("Please enter a list of NUMBERS (Numbers and Whitespaces only)")
-                sentinel = 0
 
         else:
             print("Please enter a list of NUMBERS (Numbers and whitespaces only)")
-            sentinel = 0
 
     else:
-        sentinel = 0
+        sentinel += 1
+
+""" Main program uses a sentinel value that triggers if variable first is False (no value). 
+
+First input is split into a list. If first input has a value AND if that value is all whitespaces and numbers, the main
+program convert those elements from type string to type integer. This process is repeated with the second list.
+
+The two list of integers are then compared using the list_compare function. A new list will be created with all
+duplicate values.
+
+Those duplicate values will be stripped using the unique function so only unique values are in the list. Unique
+values are then printed. """
